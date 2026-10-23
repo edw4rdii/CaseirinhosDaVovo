@@ -1,0 +1,219 @@
+.hero {
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  min-height: 13rem;
+  object-fit: cover;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.8rem var(--space-md);
+  color: var(--color-brown);
+  font-size: var(--font-size-small);
+  text-align: center;
+}
+
+.benefits span {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.benefits small {
+  color: var(--color-muted);
+  font-size: 0.55rem;
+}
+
+.home-content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+.brand-section {
+  padding: var(--space-sm) 0 var(--space-lg);
+}
+
+.brand-section h1 {
+  margin: 0 0 var(--space-md);
+  color: var(--color-brown);
+  font-size: var(--font-size-title);
+  text-align: center;
+}
+
+.brand-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.brand-list span {
+  display: grid;
+  width: 7.5rem;
+  height: 4.2rem;
+  place-items: center;
+  background: var(--color-surface);
+  color: var(--color-orange);
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--shadow-card);
+}
+
+.brand-list span:nth-child(2) {
+  color: #ef2752;
+}
+
+.brand-list span:nth-child(3) {
+  color: var(--color-orange);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+}
+
+.brand-list span:nth-child(4) {
+  color: var(--color-brown);
+  font-size: 1rem;
+}
+
+.brand-list span:nth-child(5) {
+  color: #8c49b7;
+  font-style: italic;
+}
+
+.site-footer {
+  background: var(--color-header-deep);
+  color: var(--color-surface);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.25fr 1.4fr 0.8fr;
+  gap: var(--space-lg);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.6rem var(--space-md) 1.2rem;
+  font-size: 0.62rem;
+}
+
+.footer-inner > div {
+  display: grid;
+  align-content: start;
+  gap: 0.28rem;
+}
+
+.footer-inner strong {
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.7rem;
+}
+
+.footer-brand {
+  display: flex !important;
+  align-items: center;
+  gap: 0.65rem !important;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+}
+
+.footer-company p {
+  margin: 0.35rem 0 0;
+  line-height: 1.45;
+}
+
+.footer-company > span,
+.footer-contact > span,
+.footer-social > span {
+  color: rgb(255 255 255 / 82%);
+}
+
+.footer-brand .brand-mark {
+  flex: 0 0 3rem;
+  width: 3rem;
+  height: 3rem;
+  font-family: var(--font-family);
+}
+
+.footer-logo {
+  flex: 0 0 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+}
+
+.footer-contact button {
+  justify-self: start;
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-button);
+  background: rgb(255 255 255 / 88%);
+  color: var(--color-brown);
+  font-size: 0.58rem;
+}
+
+.footer-contact button:hover,
+.footer-contact button:focus-visible {
+  background: var(--color-surface);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.social-links a {
+  display: grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 50%;
+  color: var(--color-surface);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(255 255 255 / 28%);
+  padding: 0.42rem var(--space-md);
+  color: rgb(255 255 255 / 72%);
+  font-size: 0.48rem;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .hero img {
+    min-height: 8rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .brand-list span {
+    flex: 0 0 6.5rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .footer-social {
+    padding-bottom: 0.25rem;
+  }
+}
