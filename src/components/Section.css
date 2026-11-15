@@ -1,0 +1,93 @@
+.catalog-section {
+  padding: 0 0 var(--space-lg);
+}
+
+.catalog-section h2 {
+  margin: 0 0 var(--space-md);
+  color: var(--color-brown);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+}
+
+.product-rail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.product-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.rail-arrow {
+  flex: 0 0 1.5rem;
+  background: transparent;
+  color: var(--color-brown);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rail-arrow:hover,
+.rail-arrow:focus-visible {
+  color: var(--color-orange);
+}
+
+.promo-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  padding: 0 0 var(--space-lg);
+}
+
+.promo-card {
+  display: flex;
+  min-height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background: var(--color-surface);
+  color: var(--color-brown-dark);
+}
+
+.promo-card > div {
+  display: grid;
+  gap: 0.1rem;
+  padding: var(--space-md);
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+
+.promo-card strong {
+  font-size: 1.25rem;
+}
+
+.promo-card small {
+  color: var(--color-green-dark);
+  font-family: var(--font-family);
+  font-size: 0.55rem;
+}
+
+.promo-card img {
+  width: 48%;
+  height: 8rem;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .product-grid {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .product-grid .product-card {
+    flex: 0 0 calc(50% - var(--space-xs));
+  }
+
+  .promo-strip {
+    grid-template-columns: 1fr;
+  }
+}
