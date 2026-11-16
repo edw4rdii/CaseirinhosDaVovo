@@ -12,3 +12,7 @@ getCatalogoRoutes(app);
 app.listen(3000, () => {
     console.log("Servidor on");
 });
+
+app.get('/', (req, res) => {
+  res.send('Conexão bem-sucedida! O servidor está funcionando corretamente.');
+});
