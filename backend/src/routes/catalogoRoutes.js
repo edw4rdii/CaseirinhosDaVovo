@@ -1,7 +1,7 @@
-import { controllerGet } from "../controllers/catalogoController.js";
+import { controllerGet } from "../controllers/catalogoControllers.js";
 
 const getCatalogoRoutes = (app) => {
-  app.get("/", controllerGet);
+  app.get("/teste", controllerGet);
 }
 
 export default getCatalogoRoutes;
