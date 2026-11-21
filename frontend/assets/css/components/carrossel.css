@@ -1,0 +1,50 @@
+.carrossel {
+  position: relative;
+}
+
+.carrossel__trilho {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 4 * var(--espaco-4)) / 5);
+  gap: var(--espaco-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carrossel__trilho::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel__item {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.carrossel__seta {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--cor-superficie);
+  box-shadow: var(--sombra-menu);
+  color: var(--cor-marrom);
+}
+
+.carrossel__seta--anterior {
+  left: calc(var(--espaco-2) * -1);
+}
+
+.carrossel__seta--proxima {
+  right: calc(var(--espaco-2) * -1);
+}
+
+.carrossel__seta[disabled] {
+  opacity: 0.4;
+  cursor: default;
+}

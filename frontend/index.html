@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caseirinhos da Vovó | Bolos e doces caseiros</title>
+    <link rel="stylesheet" href="assets/css/base/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base/reset.css" />
+    <link rel="stylesheet" href="assets/css/base/typography.css" />
+    <link rel="stylesheet" href="assets/css/base/layout.css" />
+    <link rel="stylesheet" href="assets/css/base/utilities.css" />
+    <link rel="stylesheet" href="assets/css/base/responsive.css" />
+    <link rel="stylesheet" href="assets/css/components/botao.css" />
+    <link rel="stylesheet" href="assets/css/components/cabecalho.css" />
+    <link rel="stylesheet" href="assets/css/components/menu-categorias.css" />
+    <link rel="stylesheet" href="assets/css/components/banner.css" />
+    <link rel="stylesheet" href="assets/css/components/carrossel.css" />
+    <link rel="stylesheet" href="assets/css/components/card-produto.css" />
+    <link rel="stylesheet" href="assets/css/components/seletor-quantidade.css" />
+    <link rel="stylesheet" href="assets/css/components/rodape.css" />
+    <link rel="stylesheet" href="assets/css/components/botoes-flutuantes.css" />
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <script type="module" src="assets/js/pages/home.js" defer></script>
+  </head>
+  <body>
+    <div data-parcial="header-loja"></div>
+    <div data-parcial="menu-categorias"></div>
+
+    <main id="conteudo">
+      <section class="home__banner container" aria-label="Destaque da loja">
+        <a class="banner" href="#encomenda" data-home="banner-principal">
+          <img src="assets/images/banners/banner-principal.jpg" alt="" />
+        </a>
+      </section>
+
+      <section class="home__campanhas container" aria-label="Campanhas">
+        <div class="banner-grupo" data-home="campanhas"></div>
+      </section>
+
+      <section class="home__beneficios" aria-label="Benefícios">
+        <ul class="home__beneficios-lista container">
+          <li class="home__beneficio"><strong>Frete grátis</strong> Consulte o regulamento</li>
+          <li class="home__beneficio"><strong>Entrega</strong> Para todo o Brasil</li>
+          <li class="home__beneficio"><strong>Retirada grátis</strong> Em Otacílio Costa</li>
+          <li class="home__beneficio"><strong>Cartão de crédito</strong> Em até 6x sem juros</li>
+        </ul>
+      </section>
+
+      <div class="container" data-home="vitrines"></div>
+    </main>
+
+    <div data-parcial="footer-loja"></div>
+
+    <div class="flutuantes">
+      <a class="flutuantes__botao flutuantes__ajuda" href="#" aria-label="Ajuda">?</a>
+      <a class="flutuantes__botao flutuantes__topo" href="#" aria-label="Voltar ao topo">TOPO</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.flutuantes {
+  position: fixed;
+  right: var(--espaco-6);
+  bottom: var(--espaco-6);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--espaco-3);
+}
+
+.flutuantes__botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: var(--sombra-menu);
+}
+
+.flutuantes__ajuda {
+  background-color: #F7E38B;
+  color: var(--cor-marrom);
+  font-size: 20px;
+  font-weight: var(--fonte-peso-bold);
+}
+
+.flutuantes__topo {
+  background-color: var(--cor-marrom);
+  color: var(--cor-branco);
+  font-size: 9px;
+  font-weight: var(--fonte-peso-bold);
+  letter-spacing: 0.04em;
+}
