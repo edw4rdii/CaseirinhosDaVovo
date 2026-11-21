@@ -66,3 +66,5 @@ function criarVitrine(vitrine) {
 function slug(texto) {
   return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
 }
+
+iniciarHome();
