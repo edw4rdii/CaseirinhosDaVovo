@@ -15,8 +15,12 @@
 
 .cabecalho__logo {
   flex-shrink: 0;
-  width: 156px;
-  height: 131px;
+  display: block;
+  width: auto;
+  max-width: 156px;
+  height: auto;
+  max-height: 131px;
+  object-fit: contain;
   margin-block: -10px;
 }
 

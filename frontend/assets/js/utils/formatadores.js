@@ -5,5 +5,7 @@ export function formatarMoeda(valor) {
 }
 
 export function formatarParcela(valor, parcelas = CONFIG.parcelasSemJuros) {
-  return `até ${parcelas}x de ${formatarMoeda(valor / parcelas)} sem juros`;
+  const valorParcela = valor / parcelas;
+  if (valorParcela < CONFIG.valorMinimoParcela) return '';
+  return `até ${parcelas}x de ${formatarMoeda(valorParcela)} sem juros`;
 }
