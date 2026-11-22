@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar conta | Caseirinhos da Vovó</title>
+    <link rel="stylesheet" href="../../assets/css/base/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/base/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/base/utilities.css" />
+    <link rel="stylesheet" href="../../assets/css/base/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/components/botao.css" />
+    <link rel="stylesheet" href="../../assets/css/components/cabecalho.css" />
+    <link rel="stylesheet" href="../../assets/css/components/rodape.css" />
+    <link rel="stylesheet" href="../../assets/css/components/campo.css" />
+    <link rel="stylesheet" href="../../assets/css/components/checkbox.css" />
+    <link rel="stylesheet" href="../../assets/css/components/link.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/login.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/cadastro.css" />
+    <script type="module" src="../../assets/js/pages/cadastro.js" defer></script>
+  </head>
+  <body class="pagina-login" data-raiz="../../">
+    <div data-parcial="header-auth"></div>
+
+    <main id="conteudo" class="login container">
+      <section class="login__cartao login__cartao--cadastro" aria-labelledby="cadastro-titulo">
+        <div class="login__cabecalho">
+          <h1 id="cadastro-titulo" class="titulo-pagina">Criar conta</h1>
+          <p class="login__subtitulo">Preencha os dados abaixo para criar seu cadastro e começar a comprar.</p>
+        </div>
+
+        <form class="login__formulario cadastro__formulario" data-cadastro="formulario" novalidate>
+          <div class="cadastro__campos">
+          <div class="campo" data-campo="nome">
+            <label class="campo__rotulo" for="cadastro-nome">Nome completo</label>
+            <div class="campo__controle">
+              <input class="campo__input" id="cadastro-nome" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome completo" aria-describedby="cadastro-nome-erro" required />
+            </div>
+            <p class="campo__mensagem oculto" id="cadastro-nome-erro" data-campo-mensagem></p>
+          </div>
+
+            <div class="cadastro__linha">
+          <div class="campo" data-campo="email">
+            <label class="campo__rotulo" for="cadastro-email">E-mail</label>
+            <div class="campo__controle">
+              <input class="campo__input" id="cadastro-email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" aria-describedby="cadastro-email-erro" required />
+            </div>
+            <p class="campo__mensagem oculto" id="cadastro-email-erro" data-campo-mensagem></p>
+          </div>
+          <div class="campo" data-campo="telefone">
+            <label class="campo__rotulo" for="cadastro-telefone">Telefone / WhatsApp</label>
+            <div class="campo__controle">
+              <input class="campo__input" id="cadastro-telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" aria-describedby="cadastro-telefone-erro" inputmode="tel" required />
+            </div>
+            <p class="campo__mensagem oculto" id="cadastro-telefone-erro" data-campo-mensagem></p>
+          </div>
+            </div>
+
+            <div class="cadastro__linha">
+          <div class="campo" data-campo="senha" data-campo-senha>
+            <label class="campo__rotulo" for="cadastro-senha">Senha</label>
+            <div class="campo__controle">
+              <input class="campo__input campo__input--com-acao" id="cadastro-senha" name="senha" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" aria-describedby="cadastro-senha-erro" required />
+              <button class="campo__acao" type="button" aria-label="Mostrar senha" aria-pressed="false" data-campo-senha-alternar>
+                <svg data-icone="mostrar" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" />
+                </svg>
+                <svg class="oculto" data-icone="ocultar" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /><path d="M4 4l16 16" />
+                </svg>
+              </button>
+            </div>
+            <p class="campo__mensagem oculto" id="cadastro-senha-erro" data-campo-mensagem></p>
+          </div>
+          <div class="campo" data-campo="confirmacao" data-campo-senha>
+            <label class="campo__rotulo" for="cadastro-confirmacao">Confirmar senha</label>
+            <div class="campo__controle">
+              <input class="campo__input campo__input--com-acao" id="cadastro-confirmacao" name="confirmacao" type="password" autocomplete="new-password" placeholder="Repita a senha" aria-describedby="cadastro-confirmacao-erro" required />
+              <button class="campo__acao" type="button" aria-label="Mostrar senha" aria-pressed="false" data-campo-senha-alternar>
+                <svg data-icone="mostrar" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" />
+                </svg>
+                <svg class="oculto" data-icone="ocultar" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /><path d="M4 4l16 16" />
+                </svg>
+              </button>
+            </div>
+            <p class="campo__mensagem oculto" id="cadastro-confirmacao-erro" data-campo-mensagem></p>
+          </div>
+            </div>
+          </div>
+
+          <div class="campo" data-campo="termos">
+            <label class="checkbox">
+              <input type="checkbox" name="termos" aria-describedby="cadastro-termos-erro" />
+              <span>Li e aceito os <a class="link" href="#termos-de-uso">Termos de Uso</a> e a <a class="link" href="#politica-de-privacidade">Política de Privacidade</a>.</span>
+            </label>
+            <p class="campo__mensagem oculto" id="cadastro-termos-erro" data-campo-mensagem></p>
+          </div>
+
+          <button class="botao botao--primario botao--bloco login__botao" type="submit">Criar conta</button>
+        </form>
+
+        <div class="login__divisor" role="separator"></div>
+
+        <p class="login__cadastro">Já possui uma conta? <a class="link" href="login.html">Entrar</a></p>
+      </section>
+    </main>
+
+    <div data-parcial="footer-auth"></div>
+  </body>
+</html>

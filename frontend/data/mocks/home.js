@@ -6,7 +6,7 @@ export const BANNER_PRINCIPAL = {
 
 export const CAMPANHAS = [
   { alt: 'Capriche nas lembrancinhas', imagem: 'assets/images/banners/banner-lembrancinhas.png', link: '#' },
-  { alt: 'Banner 2', imagem: 'assets/images/banners/banner 2.png', link: '#' },
+  { alt: 'Banner 2', imagem: 'assets/images/banners/banner_2.png', link: '#' },
   { alt: 'Banner 3', imagem: 'assets/images/banners/banner 3.png', link: '#' }
 ];
 
