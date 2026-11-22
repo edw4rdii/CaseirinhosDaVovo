@@ -71,3 +71,17 @@
   text-align: center;
   padding-block: var(--espaco-3);
 }
+
+.rodape--auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  background-color: var(--cor-branco);
+  border-top: var(--borda-fina) solid var(--cor-borda-suave);
+}
+
+.rodape--auth .rodape__direitos {
+  padding-block: 0;
+  font-size: 12px;
+}

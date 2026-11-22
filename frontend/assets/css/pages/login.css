@@ -1,0 +1,72 @@
+.pagina-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--espaco-8);
+}
+
+.login__cartao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-6);
+  width: 100%;
+  max-width: 480px;
+  padding: var(--espaco-10);
+  background-color: var(--cor-superficie);
+  border: var(--borda-fina) solid var(--cor-borda-suave);
+  border-radius: var(--raio-medio);
+  box-shadow: var(--sombra-cartao);
+}
+
+.login__cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.login__subtitulo {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--cor-texto-secundario);
+}
+
+.login__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-5);
+}
+
+.login__opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  font-size: var(--fonte-tamanho-texto);
+}
+
+.login__botao {
+  min-height: 48px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.login__divisor {
+  height: var(--borda-fina);
+  background-color: var(--cor-borda-suave);
+}
+
+.login__cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: var(--fonte-tamanho-texto);
+  line-height: 20px;
+  color: var(--cor-texto-secundario);
+}

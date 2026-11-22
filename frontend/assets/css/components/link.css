@@ -1,0 +1,10 @@
+.link {
+  color: var(--cor-laranja-escuro);
+  font-weight: var(--fonte-peso-semibold);
+  line-height: 18px;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--cor-marrom);
+}
