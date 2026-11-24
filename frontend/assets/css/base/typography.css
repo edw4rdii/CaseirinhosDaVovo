@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-tamanho-texto);
+  font-weight: var(--fonte-peso-regular);
+  color: var(--cor-texto);
+  background-color: var(--cor-creme);
+}
+
+.titulo-pagina {
+  font-size: var(--fonte-tamanho-titulo);
+  font-weight: var(--fonte-peso-bold);
+  line-height: 1.2;
+  color: var(--cor-marrom);
+}
+
+.titulo-secao {
+  font-size: var(--fonte-tamanho-subtitulo);
+  font-weight: var(--fonte-peso-bold);
+  line-height: 1.3;
+  color: var(--cor-marrom);
+}
+
+.texto-pequeno {
+  font-size: var(--fonte-tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+}

@@ -1,0 +1,6 @@
+/* Regras responsivas globais. A versão Desktop é a referência principal desta etapa. */
+@media (max-width: 1239px) {
+  .container {
+    padding-inline: var(--espaco-6);
+  }
+}

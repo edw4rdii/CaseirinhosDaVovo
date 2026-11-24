@@ -1,0 +1,20 @@
+.login__cartao--cadastro {
+  max-width: 720px;
+}
+
+.cadastro__formulario {
+  gap: var(--espaco-6);
+}
+
+.cadastro__campos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-5);
+}
+
+.cadastro__linha {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espaco-5);
+  align-items: start;
+}

@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/teste", "destination": "https://caseirosdavovo-backend.vercel.app/teste" },
+    { "source": "/teste-banco", "destination": "https://caseirosdavovo-backend.vercel.app/teste-banco" }
+  ]
+}

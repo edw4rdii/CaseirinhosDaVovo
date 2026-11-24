@@ -1,0 +1,32 @@
+<header class="cabecalho">
+  <div class="cabecalho__conteudo container">
+    <a href="index.html" aria-label="Caseirinhos da Vovó — página inicial">
+      <img class="cabecalho__logo" src="assets/images/logo/logo.png" alt="Caseirinhos da Vovó" />
+    </a>
+
+    <form class="cabecalho__busca" role="search" action="#" method="get">
+      <label class="sr-only" for="busca-produtos">Buscar produtos</label>
+      <input id="busca-produtos" type="search" name="q" placeholder="Digite o que você procura" />
+      <button type="submit" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" />
+        </svg>
+      </button>
+    </form>
+
+    <nav class="cabecalho__atalhos" aria-label="Atalhos do usuário">
+      <a class="atalho" href="#atendimento">
+        <span class="atalho__rotulo"><small>Central de</small><span class="atalho__destaque">Atendimento</span></span>
+      </a>
+      <a class="atalho" href="pages/auth/login.html">
+        <span class="atalho__rotulo"><small>Bem-vindo(a)</small><span class="atalho__destaque">Entrar</span> ou <span class="atalho__destaque">Cadastrar</span></span>
+      </a>
+      <a class="atalho atalho__carrinho" href="#carrinho" aria-label="Carrinho, 0 itens">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 4h3l2 11h10l2-7H7" /><circle cx="9" cy="19" r="1.5" /><circle cx="17" cy="19" r="1.5" />
+        </svg>
+        <span class="atalho__contador">0</span>
+      </a>
+    </nav>
+  </div>
+</header>

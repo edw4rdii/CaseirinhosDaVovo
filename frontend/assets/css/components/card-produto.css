@@ -1,0 +1,124 @@
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  background-color: var(--cor-superficie);
+  border: var(--borda-fina) solid var(--cor-borda-suave);
+  border-radius: var(--raio-pequeno);
+  overflow: hidden;
+}
+
+.card-produto__imagem {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: var(--cor-creme);
+}
+
+.card-produto__imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-produto__selo {
+  position: absolute;
+  top: var(--espaco-2);
+  left: var(--espaco-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--cor-desconto);
+  color: var(--cor-texto-sobre-destaque);
+  font-size: 10px;
+  font-weight: var(--fonte-peso-bold);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.card-produto__corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--espaco-2);
+  padding: var(--espaco-3);
+}
+
+.card-produto__nome {
+  min-height: 2.6em;
+  font-size: var(--fonte-tamanho-pequeno);
+  line-height: 1.3;
+  text-align: center;
+  color: var(--cor-texto);
+}
+
+.card-produto__precos {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--espaco-2);
+  min-height: 1.5em;
+}
+
+.card-produto__preco-antigo {
+  font-size: 11px;
+  color: var(--cor-texto-placeholder);
+  text-decoration: line-through;
+}
+
+.card-produto__preco {
+  font-size: 18px;
+  font-weight: var(--fonte-peso-bold);
+  color: var(--cor-marrom);
+}
+
+.card-produto__parcelas {
+  min-height: 2.4em;
+  font-size: 11px;
+  color: var(--cor-texto-secundario);
+  text-align: center;
+}
+
+.card-produto__parcelas strong {
+  font-weight: var(--fonte-peso-bold);
+}
+
+.card-produto__acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  margin-top: auto;
+}
+
+.card-produto__acoes .seletor-quantidade {
+  flex: 0 0 auto;
+  width: 68px;
+  height: 32px;
+  justify-content: space-between;
+  background-color: var(--cor-superficie);
+}
+
+.card-produto__acoes .seletor-quantidade__botao {
+  width: 24px;
+  flex: 0 0 24px;
+}
+
+.card-produto__acoes .seletor-quantidade__valor {
+  min-width: 20px;
+  flex: 1;
+}
+
+.card-produto__acoes .botao {
+  flex: 1;
+  width: auto;
+  min-height: 36px;
+  padding-inline: var(--espaco-2);
+}

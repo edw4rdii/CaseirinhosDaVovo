@@ -1,0 +1,113 @@
+.cabecalho {
+  background-color: var(--cor-pessego);
+  border-bottom: var(--borda-fina) solid rgba(99, 59, 27, 0.10);
+}
+
+.cabecalho__conteudo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-6);
+  width: 100%;
+  max-width: var(--largura-conteudo);
+  margin-inline: auto;
+  padding-block: var(--espaco-4);
+}
+
+.cabecalho__logo {
+  flex-shrink: 0;
+  display: block;
+  width: auto;
+  max-width: 156px;
+  height: auto;
+  max-height: 131px;
+  object-fit: contain;
+  margin-block: -10px;
+}
+
+.cabecalho__busca {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  height: 44px;
+  padding-inline: var(--espaco-5);
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-caramelo);
+  color: var(--cor-branco);
+}
+
+.cabecalho__busca input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--cor-branco);
+  font-size: var(--fonte-tamanho-pequeno);
+}
+
+.cabecalho__busca input::placeholder {
+  color: var(--cor-branco);
+  opacity: 0.85;
+}
+
+.cabecalho__atalhos {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-6);
+}
+
+.atalho {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  color: var(--cor-marrom);
+  font-size: var(--fonte-tamanho-texto);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.atalho__rotulo small {
+  display: block;
+  font-size: var(--fonte-tamanho-texto);
+}
+
+.atalho__destaque {
+  font-weight: var(--fonte-peso-bold);
+}
+
+.atalho__carrinho {
+  position: relative;
+}
+
+.atalho__contador {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding-inline: 4px;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-desconto);
+  color: var(--cor-texto-sobre-destaque);
+  font-size: 11px;
+  font-weight: var(--fonte-peso-bold);
+  line-height: 18px;
+  text-align: center;
+}
+
+.cabecalho--auth {
+  border-bottom-color: var(--cor-marrom);
+}
+
+.cabecalho--auth .cabecalho__logo {
+  width: 104px;
+  height: 104px;
+  margin-block: 0;
+}
+
+.cabecalho__voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-1);
+}

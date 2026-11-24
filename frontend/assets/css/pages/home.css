@@ -1,0 +1,52 @@
+.home__banner {
+  padding-block: var(--espaco-4);
+}
+
+.home__banner-imagem {
+  border-radius: 0;
+}
+
+.home__campanhas {
+  padding-block: var(--espaco-6) var(--espaco-4);
+}
+
+.home__vitrine {
+  padding-block: var(--espaco-6);
+}
+
+.home__vitrine-titulo {
+  margin-bottom: var(--espaco-4);
+  text-align: center;
+}
+
+.home__destaques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espaco-4);
+  margin-top: var(--espaco-6);
+}
+
+.home__beneficios {
+  background-color: var(--cor-branco);
+  border-block: var(--borda-fina) solid var(--cor-borda-suave);
+}
+
+.home__beneficios-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaco-4);
+  padding-block: var(--espaco-4);
+}
+
+.home__beneficio {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+  font-size: var(--fonte-tamanho-pequeno);
+}
+
+.home__beneficio strong {
+  display: block;
+  font-weight: var(--fonte-peso-bold);
+  color: var(--cor-marrom);
+}

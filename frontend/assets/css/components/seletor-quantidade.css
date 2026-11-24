@@ -1,0 +1,27 @@
+.seletor-quantidade {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  border: 1px solid var(--cor-borda-campo);
+  border-radius: var(--raio-pequeno);
+  overflow: hidden;
+}
+
+.seletor-quantidade__botao {
+  width: 32px;
+  height: 100%;
+  color: var(--cor-marrom);
+  font-size: var(--fonte-tamanho-texto);
+  line-height: 1;
+}
+
+.seletor-quantidade__botao:focus-visible {
+  outline-offset: -2px;
+}
+
+.seletor-quantidade__valor {
+  min-width: 28px;
+  text-align: center;
+  font-weight: var(--fonte-peso-medio);
+  user-select: none;
+}
