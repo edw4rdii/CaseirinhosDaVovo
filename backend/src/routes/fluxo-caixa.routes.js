@@ -6,7 +6,8 @@ import {
   controllerFluxoCaixaUpdate,
   controllerFluxoCaixaDelete
 } from "../controllers/fluxo-caixa.controller.js";
-import { validarLancamento, validarId } from "../validators/fluxo-caixa.validator.js";
+import { validarLancamento } from "../validators/fluxo-caixa.validator.js";
+import { validarId } from "../middlewares/validacao.middleware.js";
 
 const router = Router();
 

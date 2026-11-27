@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import ErroHttp from "../utils/erro-http.js";
 import { TIPOS_LANCAMENTO, CATEGORIAS_FLUXO_CAIXA } from "../constants/categorias-fluxo-caixa.js";
 import { dataValida } from "../utils/datas.js";
@@ -29,14 +28,6 @@ export function validarLancamento(req, res, next) {
 
   if (erros.length) {
     return next(new ErroHttp(400, erros.join("; ")));
-  }
-  next();
-}
-
-// Usado nas rotas com :id — evita erro do Mongo com id mal formado.
-export function validarId(req, res, next) {
-  if (!ObjectId.isValid(req.params.id)) {
-    return next(new ErroHttp(400, "id inválido"));
   }
   next();
 }
