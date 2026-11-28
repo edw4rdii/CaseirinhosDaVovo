@@ -26,6 +26,17 @@ body {
   font-weight: var(--fonte-peso-bold);
   line-height: 1.3;
   color: var(--cor-marrom);
+  text-align: center;
+}
+
+.titulo-secao::after {
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin: 4px auto 0;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-desconto);
+  content: '';
 }
 
 .texto-pequeno {

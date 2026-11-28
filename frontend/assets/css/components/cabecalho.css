@@ -13,6 +13,14 @@
   padding-block: var(--espaco-4);
 }
 
+.cabecalho:not(.cabecalho--auth):not(.cabecalho--painel) .cabecalho__conteudo {
+  gap: 12px;
+  max-width: 970px;
+  height: 108px;
+  min-height: 108px;
+  padding-block: 0;
+}
+
 .cabecalho__logo {
   flex-shrink: 0;
   display: block;
@@ -24,13 +32,19 @@
   margin-block: -10px;
 }
 
+.cabecalho:not(.cabecalho--auth):not(.cabecalho--painel) .cabecalho__logo {
+  max-width: 148px;
+  max-height: 116px;
+  margin-block: 0;
+}
+
 .cabecalho__busca {
-  flex: 1;
+  flex: 0 1 458px;
   display: flex;
   align-items: center;
   gap: var(--espaco-2);
-  height: 44px;
-  padding-inline: var(--espaco-5);
+  height: 34px;
+  padding-inline: 24px;
   border-radius: var(--raio-pilula);
   background-color: var(--cor-caramelo);
   color: var(--cor-branco);
@@ -43,7 +57,7 @@
   border: none;
   outline: none;
   color: var(--cor-branco);
-  font-size: var(--fonte-tamanho-pequeno);
+  font-size: 12px;
 }
 
 .cabecalho__busca input::placeholder {
@@ -51,10 +65,21 @@
   opacity: 0.85;
 }
 
+.cabecalho__busca button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
 .cabecalho__atalhos {
   display: flex;
   align-items: center;
-  gap: var(--espaco-6);
+  gap: 24px;
 }
 
 .atalho {
@@ -62,14 +87,29 @@
   align-items: center;
   gap: var(--espaco-2);
   color: var(--cor-marrom);
-  font-size: var(--fonte-tamanho-texto);
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 1.15;
   text-align: left;
+}
+
+.atalho__icone {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  color: var(--cor-caramelo);
+}
+
+.atalho__carrinho svg {
+  color: var(--cor-caramelo);
 }
 
 .atalho__rotulo small {
   display: block;
-  font-size: var(--fonte-tamanho-texto);
+  font-size: 11px;
+}
+
+.atalho[data-cabecalho="usuario"] .atalho__rotulo {
+  white-space: nowrap;
 }
 
 .atalho__destaque {
@@ -84,15 +124,15 @@
   position: absolute;
   top: -6px;
   right: -8px;
-  min-width: 18px;
-  height: 18px;
-  padding-inline: 4px;
+  min-width: 14px;
+  height: 14px;
+  padding-inline: 3px;
   border-radius: var(--raio-pilula);
-  background-color: var(--cor-desconto);
+  background-color: #FF6B16;
   color: var(--cor-texto-sobre-destaque);
-  font-size: 11px;
+  font-size: 9px;
   font-weight: var(--fonte-peso-bold);
-  line-height: 18px;
+  line-height: 14px;
   text-align: center;
 }
 
