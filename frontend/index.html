@@ -27,10 +27,13 @@
     <div data-parcial="menu-categorias"></div>
 
     <main id="conteudo">
-      <section class="home__banner container" aria-label="Destaque da loja">
-        <a class="banner" href="pages/loja/encomenda.html" data-home="banner-principal">
-          <img src="assets/images/banners/banner-principal.jpg" alt="" />
-        </a>
+      <section class="home__banner" aria-label="Destaques da loja">
+        <div class="carrossel banner-vitrine" data-home="vitrine-principal" data-carrossel data-carrossel-passo="item">
+          <div class="carrossel__trilho banner-vitrine__trilho"></div>
+          <button class="carrossel__seta carrossel__seta--anterior banner-vitrine__seta" type="button" aria-label="Destaque anterior">‹</button>
+          <button class="carrossel__seta carrossel__seta--proxima banner-vitrine__seta" type="button" aria-label="Próximo destaque">›</button>
+          <div class="banner-vitrine__indicadores" data-carrossel-indicadores role="group" aria-label="Selecionar destaque"></div>
+        </div>
       </section>
 
       <section class="home__campanhas container" aria-label="Campanhas">

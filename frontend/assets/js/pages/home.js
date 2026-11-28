@@ -9,18 +9,45 @@ import { ligarCarrossel } from '../components/carrossel.js';
 export async function iniciarHome() {
   await montarParciais();
   const vitrines = await listarVitrines();
-  preencherBanner(BANNER_PRINCIPAL);
+  preencherVitrinePrincipal([BANNER_PRINCIPAL, ...CAMPANHAS]);
   preencherCampanhas(CAMPANHAS);
   preencherVitrines(vitrines);
 }
 
-function preencherBanner(banner) {
-  const alvo = document.querySelector('[data-home="banner-principal"]');
-  if (!alvo) return;
-  alvo.href = banner.link;
-  const img = alvo.querySelector('img');
-  img.src = banner.imagem;
-  img.alt = banner.alt;
+function preencherVitrinePrincipal(destaques) {
+  const carrossel = document.querySelector('[data-home="vitrine-principal"]');
+  const trilho = carrossel?.querySelector('.carrossel__trilho');
+  if (!carrossel || !trilho) return;
+
+  trilho.replaceChildren(...destaques.map((destaque, indice) => {
+    const item = criarElemento('div', { classes: ['carrossel__item', 'banner-vitrine__item'] });
+    const link = criarElemento('a', {
+      classes: ['banner', 'banner-vitrine__slide'],
+      atributos: { href: destaque.link },
+    });
+    const fundo = criarElemento('img', {
+      classes: ['banner-vitrine__imagem-fundo'],
+      atributos: {
+        src: destaque.imagem,
+        alt: '',
+        loading: indice === 0 ? 'eager' : 'lazy',
+        'aria-hidden': 'true',
+      },
+    });
+    const imagem = criarElemento('img', {
+      classes: ['banner-vitrine__imagem'],
+      atributos: {
+        src: destaque.imagem,
+        alt: destaque.alt,
+        loading: indice === 0 ? 'eager' : 'lazy',
+      },
+    });
+
+    link.append(fundo, imagem);
+    item.append(link);
+    return item;
+  }));
+  ligarCarrossel(carrossel);
 }
 
 function preencherCampanhas(campanhas) {

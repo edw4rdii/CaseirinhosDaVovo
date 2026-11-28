@@ -1,5 +1,5 @@
 .menu-categorias {
-  background-color: var(--cor-marrom);
+  background-color: var(--cor-chocolate);
   box-shadow: var(--sombra-menu);
 }
 
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--espaco-6);
-  height: var(--altura-menu);
+  height: 44px;
   flex-wrap: wrap;
 }
 
@@ -31,5 +31,15 @@
 }
 
 .menu-categorias__item--todas::after {
-  display: none;
+  display: block;
+}
+
+.menu-categorias__item--todas {
+  font-weight: var(--fonte-peso-bold);
+}
+
+.menu-categorias__icone {
+  width: 14px;
+  height: 14px;
+  color: #FF6B16;
 }
