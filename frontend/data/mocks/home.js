@@ -1,7 +1,7 @@
 export const BANNER_PRINCIPAL = {
   alt: 'Amar é bom, mas você já provou nosso bolo? Peça já!',
   imagem: 'assets/images/banners/banner-principal.jpg',
-  link: '#encomenda',
+  link: 'pages/loja/encomenda.html',
 };
 
 export const CAMPANHAS = [

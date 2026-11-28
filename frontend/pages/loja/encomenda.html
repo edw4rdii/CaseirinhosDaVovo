@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encomende seu bolo | Caseirinhos da Vovó</title>
+    <link rel="stylesheet" href="../../assets/css/base/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/base/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/base/utilities.css" />
+    <link rel="stylesheet" href="../../assets/css/base/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/components/botao.css" />
+    <link rel="stylesheet" href="../../assets/css/components/cabecalho.css" />
+    <link rel="stylesheet" href="../../assets/css/components/menu-categorias.css" />
+    <link rel="stylesheet" href="../../assets/css/components/rodape.css" />
+    <link rel="stylesheet" href="../../assets/css/components/campo.css" />
+    <link rel="stylesheet" href="../../assets/css/components/link.css" />
+    <link rel="stylesheet" href="../../assets/css/components/aviso.css" />
+    <link rel="stylesheet" href="../../assets/css/components/checkbox.css" />
+    <link rel="stylesheet" href="../../assets/css/components/opcao-selecionavel.css" />
+    <link rel="stylesheet" href="../../assets/css/components/upload.css" />
+    <link rel="stylesheet" href="../../assets/css/components/resumo-linha.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/encomenda.css" />
+    <script type="module" src="../../assets/js/pages/encomenda.js" defer></script>
+  </head>
+  <body class="pagina-encomenda" data-raiz="../../">
+    <div data-parcial="header-loja"></div>
+    <div data-parcial="menu-categorias"></div>
+
+    <main id="conteudo" class="encomenda container">
+      <nav class="encomenda__breadcrumb" aria-label="Você está em">
+        <a href="../../index.html">Início</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Encomende seu bolo</span>
+      </nav>
+
+      <div class="encomenda__cabecalho">
+        <h1 class="titulo-pagina">Encomende seu bolo</h1>
+        <p class="encomenda__subtitulo">Monte o bolo do jeito que você imagina. Depois de enviar, a Caseirinhos da Vovó analisa o pedido e confirma com você pelo WhatsApp.</p>
+      </div>
+
+      <form class="encomenda__layout" data-encomenda="formulario" novalidate>
+        <div class="encomenda__formulario">
+          <div class="aviso">Seu pedido só é confirmado após a aprovação da Caseirinhos da Vovó. Você recebe a resposta em até 24 horas.</div>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-1">
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">1</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-1">Tamanho do bolo</h2>
+            </div>
+            <div class="campo campo--grupo" data-campo="tamanho">
+              <div class="encomenda__opcoes encomenda__opcoes--tamanho" role="radiogroup" aria-labelledby="enc-etapa-1" aria-describedby="enc-tamanho-erro">
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="1" />
+                  <span class="opcao__titulo">1 kg</span>
+                  <span class="opcao__detalhe">≈ 10 fatias</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="1.5" />
+                  <span class="opcao__titulo">1,5 kg</span>
+                  <span class="opcao__detalhe">≈ 15 fatias</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="2" />
+                  <span class="opcao__titulo">2 kg</span>
+                  <span class="opcao__detalhe">≈ 20 fatias</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="3" />
+                  <span class="opcao__titulo">3 kg</span>
+                  <span class="opcao__detalhe">≈ 30 fatias</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="4" />
+                  <span class="opcao__titulo">4 kg</span>
+                  <span class="opcao__detalhe">≈ 40 fatias</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="tamanho" value="5" />
+                  <span class="opcao__titulo">5 kg</span>
+                  <span class="opcao__detalhe">≈ 50 fatias</span>
+                </label>
+              </div>
+              <p class="encomenda__nota encomenda__nota--ajuda">Quantidade de fatias é uma estimativa. A loja confirma o tamanho ideal na aprovação.</p>
+              <p class="campo__mensagem oculto" id="enc-tamanho-erro" data-campo-mensagem></p>
+            </div>
+          </section>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-2">
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">2</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-2">Sabor e recheio</h2>
+            </div>
+            <div class="encomenda__linha">
+              <div class="campo" data-campo="sabor">
+                <label class="campo__rotulo" for="enc-sabor">Sabor da massa</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-sabor" name="sabor" type="text" autocomplete="off" placeholder="Ex.: chocolate, baunilha, red velvet" aria-describedby="enc-sabor-erro" required />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-sabor-erro" data-campo-mensagem></p>
+              </div>
+              <div class="campo" data-campo="recheio">
+                <label class="campo__rotulo" for="enc-recheio">Recheio</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-recheio" name="recheio" type="text" autocomplete="off" placeholder="Ex.: brigadeiro com morango" aria-describedby="enc-recheio-erro" required />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-recheio-erro" data-campo-mensagem></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-3">
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">3</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-3">Tema e mensagem</h2>
+            </div>
+            <div class="encomenda__linha">
+              <div class="campo" data-campo="tema">
+                <label class="campo__rotulo" for="enc-tema">Tema do bolo (opcional)</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-tema" name="tema" type="text" autocomplete="off" placeholder="Ex.: Unicórnio, Futebol, 60 anos" aria-describedby="enc-tema-erro" />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-tema-erro" data-campo-mensagem></p>
+              </div>
+              <div class="campo" data-campo="mensagem">
+                <label class="campo__rotulo" for="enc-mensagem">Mensagem no bolo (opcional)</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-mensagem" name="mensagem" type="text" autocomplete="off" placeholder="Ex.: Parabéns, Ana!" aria-describedby="enc-mensagem-erro" />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-mensagem-erro" data-campo-mensagem></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-4">
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">4</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-4">Descrição e referências</h2>
+            </div>
+            <div class="campo" data-campo="descricao">
+              <label class="campo__rotulo" for="enc-descricao">Descrição do pedido (opcional)</label>
+              <textarea class="campo__input campo__area" id="enc-descricao" name="descricao" maxlength="500" placeholder="Conte os detalhes: cores, decoração, número de pessoas…" aria-describedby="enc-descricao-contador"></textarea>
+              <div class="campo__rodape">
+                <p class="campo__mensagem oculto" data-campo-mensagem></p>
+                <p class="campo__contador" id="enc-descricao-contador" data-encomenda="contador">0/500</p>
+              </div>
+            </div>
+            <div class="campo" data-campo="restricoes">
+                <label class="campo__rotulo" for="enc-restricoes">Alergias ou restrições (opcional)</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-restricoes" name="restricoes" type="text" autocomplete="off" placeholder="Ex.: sem lactose, sem glúten" aria-describedby="enc-restricoes-erro" />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-restricoes-erro" data-campo-mensagem></p>
+              </div>
+            <div class="campo" data-campo="foto">
+              <span class="campo__rotulo" id="enc-foto-rotulo">Foto de referência (opcional)</span>
+              <div class="upload" data-upload>
+                <input class="sr-only upload__entrada" type="file" id="enc-foto" name="foto" accept="image/jpeg,image/png" aria-labelledby="enc-foto-rotulo" aria-describedby="enc-foto-erro" data-upload-input />
+                <label class="upload__area" for="enc-foto" data-upload-area>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3M12 15V4M8 8l4-4 4 4" /></svg>
+                  <span class="upload__titulo">Arraste uma imagem ou clique para enviar</span>
+                  <span class="upload__ajuda">JPG ou PNG, até 5 MB</span>
+                </label>
+                <div class="upload__arquivo oculto" data-upload-arquivo>
+                  <span class="upload__miniatura" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2" /><circle cx="9" cy="10" r="1.5" /><path d="M21 16l-5-5-8 8" /></svg>
+                  </span>
+                  <span class="upload__dados">
+                    <span class="upload__nome" data-upload-nome></span>
+                    <span class="upload__tamanho" data-upload-tamanho></span>
+                  </span>
+                  <button class="upload__remover" type="button" data-upload-remover>Remover</button>
+                </div>
+              </div>
+              <p class="campo__mensagem oculto" id="enc-foto-erro" data-campo-mensagem></p>
+            </div>
+          </section>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-5">
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">5</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-5">Data e recebimento</h2>
+            </div>
+            <div class="encomenda__linha">
+              <div class="campo" data-campo="data">
+                <label class="campo__rotulo" for="enc-data">Data do pedido</label>
+                <div class="campo__controle">
+                    <input class="campo__input campo__input--data-hora" id="enc-data" name="data" type="text" inputmode="numeric" autocomplete="off" placeholder="DD/MM/AAAA" maxlength="10" aria-describedby="enc-data-erro" required />
+                  <input class="campo__seletor-nativo" type="date" lang="pt-BR" data-seletor="data" tabindex="-1" aria-hidden="true" />
+                  <svg class="campo__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
+                </div>
+                <p class="campo__mensagem oculto" id="enc-data-erro" data-campo-mensagem></p>
+              </div>
+              <div class="campo" data-campo="horario">
+                <label class="campo__rotulo" for="enc-horario">Horário</label>
+                <div class="campo__controle">
+                  <input class="campo__input campo__input--data-hora" id="enc-horario" name="horario" type="text" inputmode="numeric" autocomplete="off" placeholder="HH:MM" maxlength="5" aria-describedby="enc-horario-erro" required />
+                  <button class="campo__botao-icone" type="button" aria-label="Selecionar horário" aria-expanded="false" aria-controls="enc-seletor-horario" data-horario-abrir>
+                    <svg class="campo__icone campo__icone--botao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+                  </button>
+                  <div class="campo__seletor-horario oculto" id="enc-seletor-horario" role="group" aria-label="Selecionar horário" aria-hidden="true" data-seletor-horario>
+                    <label class="campo__seletor-coluna">Hora
+                      <select class="campo__seletor-opcoes" size="5" aria-label="Hora" data-horario-hora></select>
+                    </label>
+                    <span aria-hidden="true">:</span>
+                    <label class="campo__seletor-coluna">Minuto
+                      <select class="campo__seletor-opcoes" size="5" aria-label="Minuto" data-horario-minuto></select>
+                    </label>
+                  </div>
+                </div>
+                <p class="campo__mensagem oculto" id="enc-horario-erro" data-campo-mensagem></p>
+              </div>
+            </div>
+            <p class="encomenda__nota"><span class="encomenda__atencao">Atenção:</span> Entre em contato para confirmação/cancelamento do pedido com no mínimo DOIS dias de antecedência. A loja confirma a disponibilidade na aprovação.</p>
+            <div class="encomenda__recebimento">
+              <span class="encomenda__rotulo" id="enc-recebimento-rotulo">Como prefere receber?</span>
+              <div class="encomenda__opcoes encomenda__opcoes--recebimento" role="radiogroup" aria-labelledby="enc-recebimento-rotulo">
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="recebimento" value="retirada" checked />
+                  <span class="opcao__titulo">Retirada na loja</span>
+                  <span class="opcao__detalhe">Sem custo</span>
+                </label>
+                <label class="opcao">
+                  <input class="sr-only" type="radio" name="recebimento" value="entrega" />
+                  <span class="opcao__titulo">Entrega</span>
+                  <span class="opcao__detalhe">Valor combinado na aprovação</span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section class="encomenda__secao" aria-labelledby="enc-etapa-6" data-dados>
+            <div class="etapa-titulo">
+              <span class="etapa-titulo__numero" aria-hidden="true">6</span>
+              <h2 class="etapa-titulo__texto" id="enc-etapa-6">Seus dados</h2>
+            </div>
+            <div class="encomenda__cliente oculto" data-dados-bloco="cliente">
+              <div class="encomenda__cliente-dados">
+                <span class="encomenda__cliente-legenda">Pedido em nome de</span>
+                <span class="encomenda__cliente-nome" data-dados-nome></span>
+                <span class="encomenda__cliente-telefone">WhatsApp <span data-dados-telefone></span></span>
+              </div>
+              <button class="link" type="button" data-dados-acao="alterar">Alterar dados</button>
+            </div>
+            <div class="encomenda__linha" data-dados-bloco="campos">
+              <div class="campo" data-campo="nome">
+                <label class="campo__rotulo" for="enc-nome">Seu nome</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" aria-describedby="enc-nome-erro" required />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-nome-erro" data-campo-mensagem></p>
+              </div>
+              <div class="campo" data-campo="whatsapp">
+                <label class="campo__rotulo" for="enc-whatsapp">WhatsApp</label>
+                <div class="campo__controle">
+                  <input class="campo__input" id="enc-whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" aria-describedby="enc-whatsapp-erro" inputmode="tel" required />
+                </div>
+                <p class="campo__mensagem oculto" id="enc-whatsapp-erro" data-campo-mensagem></p>
+              </div>
+            </div>
+            <p class="encomenda__nota" data-dados-bloco="campos">Usamos o WhatsApp para confirmar seu pedido.</p>
+            <p class="encomenda__chamada" data-dados-bloco="visitante">Já tem uma conta? <a class="link" href="../auth/login.html">Entrar</a></p>
+            <p class="encomenda__chamada oculto" data-dados-bloco="restaurar"><button class="link" type="button" data-dados-acao="restaurar">Usar dados cadastrados</button></p>
+          </section>
+        </div>
+
+        <aside class="encomenda__resumo" aria-labelledby="enc-resumo-titulo">
+          <h2 class="encomenda__resumo-titulo" id="enc-resumo-titulo">Resumo do pedido</h2>
+          <dl class="resumo-lista">
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Tamanho</dt><dd class="resumo-linha__valor" data-resumo="tamanho">—</dd></div>
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Sabor</dt><dd class="resumo-linha__valor" data-resumo="sabor">—</dd></div>
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Recheio</dt><dd class="resumo-linha__valor" data-resumo="recheio">—</dd></div>
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Tema</dt><dd class="resumo-linha__valor" data-resumo="tema">—</dd></div>
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Data e horário</dt><dd class="resumo-linha__valor" data-resumo="dataHorario">—</dd></div>
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Recebimento</dt><dd class="resumo-linha__valor" data-resumo="recebimento">Retirada na loja</dd></div>
+          </dl>
+          <div class="encomenda__divisor" role="separator"></div>
+          <dl class="resumo-lista">
+            <div class="resumo-linha"><dt class="resumo-linha__rotulo">Valor</dt><dd class="resumo-linha__valor">A confirmar na aprovação</dd></div>
+          </dl>
+          <div class="aviso aviso--erro oculto" role="alert" data-encomenda="erro-envio"></div>
+          <button class="botao botao--primario botao--bloco botao--grande" type="submit" data-encomenda="enviar">Enviar pedido para aprovação</button>
+          <p class="encomenda__resumo-nota">Você receberá a resposta pelo WhatsApp informado.</p>
+        </aside>
+      </form>
+    </main>
+
+    <div data-parcial="footer-loja"></div>
+  </body>
+</html>

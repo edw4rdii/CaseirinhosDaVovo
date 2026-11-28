@@ -49,3 +49,9 @@
 .botao--bloco {
   width: 100%;
 }
+
+.botao--grande {
+  min-height: 48px;
+  font-size: 16px;
+  line-height: 20px;
+}
