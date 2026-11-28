@@ -24,3 +24,25 @@ export function paraInputData(dataIso = new Date()) {
   // en-CA formata como AAAA-MM-DD
   return new Date(dataIso).toLocaleDateString('en-CA', { timeZone: CONFIG.fusoHorario });
 }
+
+// "2026-11-14" → "14/11/2026". Usa só o texto do <input type="date">, sem passar por Date (evita deslocar o dia pelo fuso).
+export function formatarDataInput(valor) {
+  const [ano, mes, dia] = String(valor ?? '').split('-');
+  return ano && mes && dia ? `${dia}/${mes}/${ano}` : '';
+}
+
+export function converterDataParaISO(valor) {
+  const partes = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(String(valor ?? ''));
+  if (!partes) return '';
+
+  const [, dia, mes, ano] = partes;
+  const data = new Date(0);
+  data.setUTCFullYear(Number(ano), Number(mes) - 1, Number(dia));
+  if (
+    data.getUTCFullYear() !== Number(ano)
+    || data.getUTCMonth() !== Number(mes) - 1
+    || data.getUTCDate() !== Number(dia)
+  ) return '';
+
+  return `${ano}-${mes}-${dia}`;
+}

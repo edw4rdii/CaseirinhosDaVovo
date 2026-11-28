@@ -1,0 +1,28 @@
+.resumo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+}
+
+.resumo-linha {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-3);
+  font-size: var(--fonte-tamanho-texto);
+}
+
+.resumo-linha__rotulo {
+  flex: 0 0 100px;
+  line-height: 20px;
+  color: var(--cor-texto-secundario);
+}
+
+.resumo-linha__valor {
+  flex: 1;
+  min-width: 0;
+  font-weight: var(--fonte-peso-semibold);
+  line-height: 18px;
+  text-align: right;
+  overflow-wrap: anywhere;
+  color: var(--cor-texto);
+}
