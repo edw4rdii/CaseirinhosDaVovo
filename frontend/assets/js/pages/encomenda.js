@@ -6,13 +6,14 @@ import { gravarArmazenado } from '../core/armazenamento.js';
 import { identificarUsuarioNoCabecalho } from '../components/cabecalho.js';
 import { ligarUpload } from '../components/upload.js';
 import { definirErroCampo, limparErroCampo } from '../components/campo.js';
-import { criarEncomenda, CHAVE_ULTIMO_PEDIDO } from '../services/pedido-service.js';
+// import { criarEncomenda } from '../services/pedido-service.js';
+import { CHAVE_ULTIMO_PEDIDO } from '../services/pedido-service.js';
 import { mascararTelefone } from '../utils/mascaras.js';
 import { paraInputData, formatarDataInput, converterDataParaISO } from '../utils/datas.js';
 import { validarObrigatorio, validarTelefone } from '../utils/validadores.js';
 
 const SEM_VALOR = '—';
-const MENSAGEM_ERRO_ENVIO = 'Não foi possível registrar seu pedido agora. Seus dados foram mantidos, tente novamente em instantes.';
+// const MENSAGEM_ERRO_ENVIO = 'Não foi possível registrar seu pedido agora. Seus dados foram mantidos, tente novamente em instantes.';
 
 const REGRAS = [
   ['tamanho', (d) => (d.tamanho ? '' : 'Escolha o tamanho do bolo.')],
@@ -152,9 +153,8 @@ function ligarFormulario(formulario) {
   marcarVazios(formulario);
   atualizarResumo(formulario);
 
-  ouvir(formulario, 'submit', async (evento) => {
+  ouvir(formulario, 'submit', (evento) => {
     evento.preventDefault();
-    esconderErroEnvio(formulario);
 
     const valores = lerValores(formulario);
     const invalidos = REGRAS.filter(([nome, validar]) => {
@@ -173,7 +173,16 @@ function ligarFormulario(formulario) {
       return;
     }
 
+    /* 
+    esconderErroEnvio(formulario);
     await enviar(formulario, {
+      ...valores,
+      data: converterDataParaISO(valores.data),
+      foto: upload.obterArquivo(),
+    });
+    */
+
+    enviar(formulario, {
       ...valores,
       data: converterDataParaISO(valores.data),
       foto: upload.obterArquivo(),
@@ -211,15 +220,21 @@ function montarDataHorario(valores) {
   return dataTexto || SEM_VALOR;
 }
 
-function montarResumo(formulario) {
+function montarResumo(formulario, arquivoFoto) {
   const valores = lerValores(formulario);
   return {
     tamanho: rotuloEscolhido(formulario, 'tamanho') || SEM_VALOR,
     sabor: valores.sabor || SEM_VALOR,
     recheio: valores.recheio || SEM_VALOR,
     tema: valores.tema || SEM_VALOR,
+    mensagem: valores.mensagem || SEM_VALOR,
+    descricao: valores.descricao || SEM_VALOR,
+    restricoes: valores.restricoes || SEM_VALOR,
+    foto: arquivoFoto?.name || SEM_VALOR,
     dataHorario: montarDataHorario(valores),
     recebimento: rotuloEscolhido(formulario, 'recebimento') || SEM_VALOR,
+    nome: valores.nome || SEM_VALOR,
+    whatsapp: valores.whatsapp || SEM_VALOR,
     valor: 'A confirmar na aprovação',
   };
 }
@@ -317,6 +332,8 @@ function ligarDadosDoCliente(formulario, campoDe, entradaDe) {
   return { exibirCampos: () => { if (selecionar('[data-dados-bloco="campos"]', secao).classList.contains('oculto')) aplicar('editando'); } };
 }
 
+/*
+Fluxo anterior de envio real ao backend, mantido comentado enquanto a rota /pedidos não está ativa.
 function esconderErroEnvio(formulario) {
   selecionar('[data-encomenda="erro-envio"]', formulario).classList.add('oculto');
 }
@@ -345,6 +362,15 @@ async function enviar(formulario, valores) {
     botao.disabled = false;
     botao.textContent = rotulo;
   }
+}
+*/
+
+function enviar(formulario, valores) {
+  gravarArmazenado(CHAVE_ULTIMO_PEDIDO, {
+    demonstracao: true,
+    resumo: montarResumo(formulario, valores.foto),
+  }, { temporario: true });
+  window.location.assign('pedido-enviado.html');
 }
 
 iniciarEncomenda();

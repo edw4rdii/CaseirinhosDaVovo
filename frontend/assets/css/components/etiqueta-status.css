@@ -1,0 +1,24 @@
+.etiqueta-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  padding: 6px 14px 6px 12px;
+  border-radius: var(--raio-pilula);
+  font-size: var(--fonte-tamanho-texto);
+  font-weight: var(--fonte-peso-semibold);
+  line-height: 18px;
+  color: var(--cor-texto);
+  white-space: nowrap;
+}
+
+.etiqueta-status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--cor-marrom);
+}
+
+.etiqueta-status--pendente {
+  background-color: var(--cor-pessego);
+}

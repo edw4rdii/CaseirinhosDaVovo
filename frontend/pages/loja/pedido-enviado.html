@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido enviado | Caseirinhos da Vovó</title>
+    <link rel="stylesheet" href="../../assets/css/base/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/base/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/base/utilities.css" />
+    <link rel="stylesheet" href="../../assets/css/base/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/components/botao.css" />
+    <link rel="stylesheet" href="../../assets/css/components/cabecalho.css" />
+    <link rel="stylesheet" href="../../assets/css/components/menu-categorias.css" />
+    <link rel="stylesheet" href="../../assets/css/components/rodape.css" />
+    <link rel="stylesheet" href="../../assets/css/components/campo.css" />
+    <link rel="stylesheet" href="../../assets/css/components/link.css" />
+    <link rel="stylesheet" href="../../assets/css/components/aviso.css" />
+    <link rel="stylesheet" href="../../assets/css/components/etiqueta-status.css" />
+    <link rel="stylesheet" href="../../assets/css/components/resumo-linha.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/pedido-enviado.css" />
+    <script type="module" src="../../assets/js/pages/pedido-enviado.js" defer></script>
+  </head>
+  <body class="pagina-pedido-enviado" data-raiz="../../">
+    <div data-parcial="header-loja"></div>
+    <div data-parcial="menu-categorias"></div>
+
+    <main id="conteudo" class="pedido-enviado container">
+      <section class="pedido-enviado__cartao" aria-labelledby="pedido-titulo">
+        <svg class="pedido-enviado__icone" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="32" fill="#2B8419" />
+          <path d="M18 33l9.5 9.5L46 23" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h1 class="titulo-pagina" id="pedido-titulo">Pedido enviado!</h1>
+        <p class="pedido-enviado__texto">Recebemos a sua encomenda. A Caseirinhos da Vovó vai analisar os detalhes e entrar em contato pelo WhatsApp <span data-pedido="telefone"></span> para confirmar.</p>
+
+        <div class="pedido-enviado__identificacao">
+          <p class="pedido-enviado__numero">Pedido nº <span data-pedido="numero"></span></p>
+          <span class="etiqueta-status" data-pedido="status"></span>
+        </div>
+
+        <dl class="resumo-lista pedido-enviado__resumo">
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Tamanho</dt><dd class="resumo-linha__valor" data-pedido="tamanho"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Sabor</dt><dd class="resumo-linha__valor" data-pedido="sabor"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Recheio</dt><dd class="resumo-linha__valor" data-pedido="recheio"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Tema</dt><dd class="resumo-linha__valor" data-pedido="tema"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Mensagem no bolo</dt><dd class="resumo-linha__valor" data-pedido="mensagem"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Descrição</dt><dd class="resumo-linha__valor" data-pedido="descricao"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Alergias ou restrições</dt><dd class="resumo-linha__valor" data-pedido="restricoes"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Foto de referência</dt><dd class="resumo-linha__valor" data-pedido="foto"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Data e horário</dt><dd class="resumo-linha__valor" data-pedido="dataHorario"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Recebimento</dt><dd class="resumo-linha__valor" data-pedido="recebimento"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Nome</dt><dd class="resumo-linha__valor" data-pedido="nome"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">WhatsApp</dt><dd class="resumo-linha__valor" data-pedido="whatsapp"></dd></div>
+          <div class="resumo-linha"><dt class="resumo-linha__rotulo">Valor</dt><dd class="resumo-linha__valor" data-pedido="valor"></dd></div>
+        </dl>
+
+        <div class="aviso">Seu pedido só é confirmado após a aprovação da Caseirinhos da Vovó. Você recebe a resposta em até 24 horas.</div>
+
+        <a class="botao botao--primario botao--bloco botao--grande" href="../../index.html" data-pedido="voltar">Voltar para a loja</a>
+        <a class="link" href="encomenda.html" data-pedido="nova">Fazer outra encomenda</a>
+      </section>
+    </main>
+
+    <div data-parcial="footer-loja"></div>
+  </body>
+</html>
